@@ -31,5 +31,5 @@ If you are interested, follow these steps:
 
 1. Go through the checklist.
 2. Check out what we expect from you (`expectations <{filename}expectations.rst>`_\, `acceptance requirements <{filename}acceptance_req.rst>`_\, `application guidelines <{filename}application_guidelines.rst>`_\)
-3. Get familiar with TARDIS (`Github <https://github.com/tardis-sn/tardis>`_\, `Documentation <https://tardis-sn.github.io/tardis/>`_\) and pick a project from the `Ideas Page <{filename}ideas.rst>`_.
+3. Get familiar with TARDIS (`Github <https://github.com/tardis-sn/tardis>`_\, `Documentation <https://tardis-sn.github.io/tardis/>`_\) and pick a project from the `Ideas Page <{filename}ideas.rst>`_
 4. `Apply! <https://summerofcode.withgoogle.com>`_

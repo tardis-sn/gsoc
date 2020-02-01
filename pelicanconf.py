@@ -8,7 +8,7 @@ SITEURL = 'https://tardis-sn.github.io/tardis-sn-gsoc-website'
 RELATIVE_URLS = True
 
 PATH = 'content'
-STATIC_PATH='images'
+STATIC_PATH=['images', 'pdfs']
 
 TIMEZONE = 'EST'
 

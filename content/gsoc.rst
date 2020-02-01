@@ -33,3 +33,14 @@ If you are interested, follow these steps:
 2. Check out what we expect from you (`expectations <{filename}expectations.rst>`_\, `acceptance requirements <{filename}acceptance_req.rst>`_\, `application guidelines <{filename}application_guidelines.rst>`_\)
 3. Get familiar with TARDIS (`Github <https://github.com/tardis-sn/tardis>`_\, `Documentation <https://tardis-sn.github.io/tardis/>`_\) and pick a project from the `Ideas Page <{filename}ideas.rst>`_
 4. `Apply! <https://summerofcode.withgoogle.com>`_
+
+
+
+*********************************
+Previously Accepted GSoc Projects
+*********************************
+
+These were the projects that we selected for GSoC 2016 (a while ago but still a good reference) and can serve as a
+reference for future proposals:
+
+* `pdf <{static}/pdfs/tardis_proposal.pdf>`_

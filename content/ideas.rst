@@ -126,3 +126,26 @@ benchmark in asv (airspeed velocity) that can automatically generate a report fo
 
 **Your first objective if you choose to accept the mission:** implement a simple benchmark in asv.
 
+------------
+
+**Quantity-ify TARDIS:**
+
+**Difficulty:** Easy/Moderate
+
+**Astronomy Knowledge Needed:** None
+
+**Mentors:** ???
+
+**Programming Skills Required:** Python, Pandas
+
+**GSoC Application Tag:** dfq
+
+**Description:** TARDIS frequently uses the Pandas.DataFrame and Pandas.Series data structures. However, these data
+structures are not immediately compatible with storing the physical units associated with the numbers stored in the
+structures. TARDIS puts a strong emphasis on both code readability and testing, and keeping track of the physical units
+during internal calculations is extremely important towards both of these points of emphasis. The goal of this project
+is to extend the Pandas data structures by adding meta data that stores the physical units. In addition, tests need to
+be written to ensure that the units during internal calculations are consistent.
+
+**Your first objective if you choose to accept the mission:** ???
+

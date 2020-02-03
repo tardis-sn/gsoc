@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'TARDIS-SN'
 SITENAME = 'TARDIS GSoC'
-SITEURL = 'https://tardis-sn.github.io/tardis-sn-gsoc-website'
+SITEURL = 'https://tardis-sn.github.io/gsoc'
 RELATIVE_URLS = True
 
 PATH = 'content'

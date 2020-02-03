@@ -1,1 +1,1 @@
-[tardis-sn.github.io/tardis-sn-gsoc-website](https://tardis-sn.github.io/tardis-sn-gsoc-website/)
+[tardis-sn.github.io/gsoc](https://tardis-sn.github.io/gsoc/)

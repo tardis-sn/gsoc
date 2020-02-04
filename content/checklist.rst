@@ -33,15 +33,16 @@ The Application Process
 
     * Get familiar with our `development model <https://tardis-sn.github.io/tardis/development/index.html>`_ using git and github.
 
-2. Check out the `Ideas Page <{filename}ideas.rst>`_
-3. Introduce yourself to us on `Gitter <https://gitter.im/tardis-sn/gsoc>`_
-4. Start your application (`Application Guidelines <{filename}application_guidelines.rst>`_\)
-5. Select a project.
+2. Do the TARDIS intro challenge (`Collab Notebook <https://colab.research.google.com/drive/1CALFsRDdVQsQDlWew_-f3VBJb7yU2DKb>`_)
+3. Check out the `Ideas Page <{filename}ideas.rst>`_
+4. Introduce yourself to us on `Gitter <https://gitter.im/tardis-sn/gsoc>`_
+5. Start your application (`Application Guidelines <{filename}application_guidelines.rst>`_\)
+6. Select a project.
 
     * Many projects have additional specific instructions. They often involve a Pull Request.
 
-6. Discuss and share your project details (don't wait!)
-7. Submit your application!
+7. Discuss and share your project details (don't wait!)
+8. Submit your application!
 
 ***************************************
 You got accepted (before coding begins)

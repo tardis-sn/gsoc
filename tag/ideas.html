@@ -75,10 +75,25 @@ a detailed timeline with milestones that shows us that you have thought about ho
 months. For any questions about the projects, please ask on <a class="reference external" href="https://gitter.im/tardis-sn/gsoc">Gitter</a>.</p>
 <p>Putting in a Pull Request with the First objective is essential for each proposal to allow to see how you work.</p>
 <hr class="docutils" />
+<p><strong>Visualizing TARDIS flow through a graph</strong></p>
+<p><strong>Difficulty:</strong> Easy</p>
+<p><strong>Astronomy Knowledge Needed:</strong> None</p>
+<p><strong>Mentors:</strong> Marc Williamson, Christian Vogl</p>
+<p><strong>Programming Skills Required:</strong> Python, plotting preferred</p>
+<p><strong>GSoC Application Tag:</strong> network_graph</p>
+<p><strong>Description:</strong> TARDIS calculates the state of the gas of the exploding star in the plasma calculation. When the gas
+changes temperature, TARDIS can automatically calculate what properties of the gas change. It uses a network graph for
+this. This also allows us to visualize how the properties of the gas are calculated. This project will make an
+interactive visualization of this process using networkx and matplotlib.</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> There already some parts of the visualization components
+written for this project. You can find this here:
+<a class="reference external" href="https://tardis-sn.github.io/tardis/api/tardis.plasma.base.html#tardis.plasma.base.BasePlasma.write_to_dot">https://tardis-sn.github.io/tardis/api/tardis.plasma.base.html#tardis.plasma.base.BasePlasma.write_to_dot</a> - try to
+write the graph to a dotfile and then visualize with graphviz.</p>
+<hr class="docutils" />
 <p><strong>Jupyter Notebook Widget for TARDIS</strong></p>
 <p><strong>Difficulty:</strong> Hard</p>
 <p><strong>Astronomy Knowledge Needed:</strong> None</p>
-<p><strong>Mentors:</strong> Wolfgang Kerzendorf, Marc Williamson</p>
+<p><strong>Mentors:</strong> Wolfgang Kerzendorf, Yssa Camacho</p>
 <p><strong>Programming Skills Required:</strong> Python, Jupyter</p>
 <p><strong>Related TEP:</strong> <a class="reference external" href="https://github.com/tardis-sn/tep/blob/master/TEP012_gui_overhaul.rst">TEP012</a></p>
 <p><strong>GSoC Application Tag:</strong> jupyter-widget</p>
@@ -106,10 +121,10 @@ important to understand how much this microphyiscs adds to the runtime of the co
 benchmark in asv (airspeed velocity) that can automatically generate a report for us.</p>
 <p><strong>Your first objective if you choose to accept the mission:</strong> implement a simple benchmark in asv.</p>
 <hr class="docutils" />
-<p><strong>Quantity-ify TARDIS:</strong></p>
+<p><strong>Quantity-ify TARDIS</strong></p>
 <p><strong>Difficulty:</strong> Easy/Moderate</p>
 <p><strong>Astronomy Knowledge Needed:</strong> None</p>
-<p><strong>Mentors:</strong> ???</p>
+<p><strong>Mentors:</strong> Marc Williamson</p>
 <p><strong>Programming Skills Required:</strong> Python, Pandas</p>
 <p><strong>GSoC Application Tag:</strong> dfq</p>
 <p><strong>Description:</strong> TARDIS frequently uses the Pandas.DataFrame and Pandas.Series data structures. However, these data
@@ -118,7 +133,83 @@ structures. TARDIS puts a strong emphasis on both code readability and testing, 
 during internal calculations is extremely important towards both of these points of emphasis. The goal of this project
 is to extend the Pandas data structures by adding meta data that stores the physical units. In addition, tests need to
 be written to ensure that the units during internal calculations are consistent.</p>
-<p><strong>Your first objective if you choose to accept the mission:</strong> ???</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> Write a simple extension of the Pandas.DataFrame that
+keeps track of units for the dataframe. Ensure that the units persist through copying operations. You can use the
+TARDIS IsotopeAbundances class for inspiration.</p>
+<hr class="docutils" />
+<p><strong>Integration Tests</strong></p>
+<p><strong>Difficulty:</strong> Easy</p>
+<p><strong>Astronomy Knowledge Needed:</strong> None</p>
+<p><strong>Mentors:</strong> Vytautas, Andreas</p>
+<p><strong>Programming Skills Required:</strong> Python, Azure Pipelines</p>
+<p><strong>GSoC Application Tag:</strong> integration-testing</p>
+<p><strong>Description:</strong>  Testing a scientific code like TARDIS is very important. We need to ensure that the scientific
+insights we gain using the code are not based on bugs. Open collaboration with GitHub is great, but the more people
+work on the code the more opportunities there are to introduce bugs. Making sure that the code doesn't change or only
+changes as we expect it, is thus an important part of TARDIS development.</p>
+<p>We have two types of tests: unit tests that verify small portions of the code and full-scale integration tests. Both of
+these test types are implemented with a framework. But the integration tests are difficult to use.</p>
+<ul class="simple">
+<li>currently we mainly run the integration tests on an external server. We want to integrate them into our general Azure Pipeline continuous integration routine. We'd also like to expand that and check also different properties of our model against reference data (e.g. electron densities, ionization fractions, dilution factors)</li>
+<li>hand in hand with expanding the verification process we will improve the reporting process which should contain detailed plots and comparison results. A framework exists but is currently not actively used.</li>
+</ul>
+<p><strong>Your first objective if you choose to accept the mission:</strong> Run the integration tests as described here:
+<a class="reference external" href="https://tardis-sn.github.io/tardis/development/running_tests.html">https://tardis-sn.github.io/tardis/development/running_tests.html</a></p>
+<hr class="docutils" />
+<p><strong>Optimisation with Numba</strong></p>
+<p><strong>Difficulty:</strong> Easy/Moderate</p>
+<p><strong>Astronomy Knowledge Needed:</strong> None</p>
+<p><strong>Mentors:</strong> Alice Harpole, Wolfgang Kerzendorf</p>
+<p><strong>Programming Skills Required:</strong> Python</p>
+<p><strong>GSoC Application Tag:</strong> optimization, profiling</p>
+<p><strong>Description:</strong> In order to optimize the execution of several computationally intensive parts of TARDIS, we currently
+use Cython. This converts these parts of the code to C and compiles them ahead of time, significantly improving their
+performance. However, while fast, Cython involves a lot of extra boilerplate code, making the code overall harder to
+follow and more difficult to maintain. We would, therefore, like to convert this Cython code to Numba, a just-in-time
+Python compiler that involves significantly less additional code to Cython but can achieve similar performance.</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> Modify the function intensity_black_body
+(<a class="reference external" href="https://github.com/tardis-sn/tardis/blob/f4dc1f2e36cc0406c9b90f8255ec74083c6ffc51/tardis/util/base.py#L246-L270">https://github.com/tardis-sn/tardis/blob/f4dc1f2e36cc0406c9b90f8255ec74083c6ffc51/tardis/util/base.py#L246-L270</a>)
+to be compiled with Numba.</p>
+<hr class="docutils" />
+<p><strong>Enable the Dask framework for parallel execution for TARDIS</strong></p>
+<p><strong>Difficulty:</strong> Hard</p>
+<p><strong>Astronomy knowledge needed:</strong> None</p>
+<p><strong>Mentors:</strong> Wolfgang Kerzendorf, Christian Vogl</p>
+<p><strong>Programming skills:</strong> Python, dask</p>
+<p><strong>GSoC Application Tag:</strong> dask</p>
+<p><strong>Description:</strong> Exploring different simulations of supernovae and comparing them with observations is one of the
+important tasks of TARDIS. This means that TARDIS needs to be run many tens of thousand times with different inputs.
+The Dask framework will allow TARDIS to be excecuted on multi-core systems and super-computers. This project aims to
+combine TARDIS with dask to make it easy to run many iterations of TARDIS.</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> Use dask to run distributed TARDIS instances in parallel
+on your system. Use <a class="reference external" href="http://distributed.dask.org/en/latest/client.html">http://distributed.dask.org/en/latest/client.html</a> as a guide to make a simple example.</p>
+<hr class="docutils" />
+<p><strong>Carsus Atomic Data</strong></p>
+<p><strong>Difficulty:</strong> Hard</p>
+<p><strong>Astronomy Knowledge Needed:</strong> Atomic Physics</p>
+<p><strong>Mentors:</strong> Andreas Flörs, Christian Vogl</p>
+<p><strong>Programming Skills Required:</strong> Python</p>
+<p><strong>GSoC Application Tag:</strong> Carsus</p>
+<p><strong>Description:</strong> In addition to the input parameters (brightness of the supernova, ejected mass of the different
+chemical elements, etc.), TARDIS requires data for describing the structure of atoms from different elements (e.g. a
+sodium atom is differently structured than an iron atom; see the figure for a quick overview for carbon).</p>
+<img alt="Alternative text" src="../images/bohrmodel.png" style="width: 400px;" />
+<p>This data is not measured by astronomers but is most often gathered in a lab by atomic physicists. As measurement
+equipment gets more and more precise, so do the measured structures of different elements. Thus these values update
+from time to time and are often available in simple ASCII files (<a class="reference external" href="http://kurucz.harvard.edu/atoms/1401/gf1401.gam">http://kurucz.harvard.edu/atoms/1401/gf1401.gam</a>).
+While we have compiled a small atom data set from some specific sources for our initial work, we would like to get a
+collection of parsers that can read the different ASCII formats of the group and put this information in a uniform
+database.</p>
+<p>For this project, you would help us make parsers for a variety of formats from a collection of atomic data sources
+(see the TEP) and in the second part put this into a database. The assembled database will not only be very interesting
+for us, but also for many other fields of astronomy that do rely on atomic data. A useful resource of understanding
+atomic structure description can be found in
+<a class="reference external" href="http://www.physics.byu.edu/faculty/bergeson/physics571/notes/L27spectnotation.pdf">http://www.physics.byu.edu/faculty/bergeson/physics571/notes/L27spectnotation.pdf</a>.</p>
+<p>We created a package that compiles all of this information into a database named Carsus
+(see <a class="reference external" href="http://carsus.readthedocs.io/en/latest/">http://carsus.readthedocs.io/en/latest/</a>). For this year we aim to strengthen the link between Carsus and TARDIS
+and also include more atomic data into Carsus.</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> download the atomic data from
+<a class="reference external" href="http://kookaburra.phyast.pitt.edu/hillier/web/CMFGEN.htm">http://kookaburra.phyast.pitt.edu/hillier/web/CMFGEN.htm</a> and read in the tabulated data contained in si2_osc_kurucz.</p>
 </div>
                 </article>
             </aside><!-- /#featured -->

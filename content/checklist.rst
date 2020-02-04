@@ -25,13 +25,13 @@ The Application Process
 
 1. Get familiar with TARDIS
 
-    * Go to the `documentation pages <https://tardis-sn.github.io/tardis/>`_
+* Go to the `documentation pages <https://tardis-sn.github.io/tardis/>`_
 
-    * Install the software (https://tardis-sn.github.io/tardis/installation.html)
+* Install the software (https://tardis-sn.github.io/tardis/installation.html)
 
-    * Run the example (https://tardis-sn.github.io/tardis/quickstart/quickstart.html)
+* Run the example (https://tardis-sn.github.io/tardis/quickstart/quickstart.html)
 
-    * Get familiar with our `development model <https://tardis-sn.github.io/tardis/development/index.html>`_ using git and github.
+* Get familiar with our `development model <https://tardis-sn.github.io/tardis/development/index.html>`_ using git and github.
 
 2. Do the TARDIS intro challenge (`Collab Notebook <https://colab.research.google.com/drive/1CALFsRDdVQsQDlWew_-f3VBJb7yU2DKb>`_)
 3. Check out the `Ideas Page <{filename}ideas.rst>`_
@@ -39,7 +39,7 @@ The Application Process
 5. Start your application (`Application Guidelines <{filename}application_guidelines.rst>`_\)
 6. Select a project.
 
-    * Many projects have additional specific instructions. They often involve a Pull Request.
+* Many projects have additional specific instructions. They often involve a Pull Request.
 
 7. Discuss and share your project details (don't wait!)
 8. Submit your application!
@@ -53,9 +53,9 @@ You got accepted (before coding begins)
 4. Fill out your profile (one sentence summary, your name, link to proposal, dev log, and GSoC page)
 5. Get familiarized with web resources
 
-    * Gitter
+* Gitter
 
-    * Github
+* Github
 
 6. Post your proposal online (Google Docs, overleaf, wiki, etc.)
 7. Describe your project plan (preferably as a TARDIS Enhancement Proposal at github.com/tardis-sn/tep
@@ -65,6 +65,7 @@ You got accepted (before coding begins)
 ******************
 Once coding begins
 ******************
+
 1. Write maintainable, portable, complete code.
 2. Keep a daily log of your activities online somewhere (a blog or your wiki user page is great for this)
 3. We expect you to sign-in/sign off on Gitter on working days and give us a short summary of your plans for the day

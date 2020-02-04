@@ -87,7 +87,7 @@ Putting in a Pull Request with the First objective is essential for each proposa
 
 **Programming Skills Required:** Python, plotting preferred
 
-**GSoC Application Tag:** network_graph
+**GSoC Application Tag:** network-graph
 
 **Description:** TARDIS calculates the state of the gas of the exploding star in the plasma calculation. When the gas
 changes temperature, TARDIS can automatically calculate what properties of the gas change. It uses a network graph for
@@ -208,7 +208,7 @@ https://tardis-sn.github.io/tardis/development/running_tests.html
 
 **Optimisation with Numba**
 
-**Difficulty:** Easy/Moderate
+**Difficulty:** Moderate
 
 **Astronomy Knowledge Needed:** None
 
@@ -216,7 +216,7 @@ https://tardis-sn.github.io/tardis/development/running_tests.html
 
 **Programming Skills Required:** Python
 
-**GSoC Application Tag:** optimization, profiling
+**GSoC Application Tag:** numba
 
 **Description:** In order to optimize the execution of several computationally intensive parts of TARDIS, we currently
 use Cython. This converts these parts of the code to C and compiles them ahead of time, significantly improving their

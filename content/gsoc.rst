@@ -42,8 +42,6 @@ If you are interested, follow these steps:
 
 4. `Apply! <https://summerofcode.withgoogle.com>`_
 
-5. Follow TARDIS-SN on `Twitter <https://twitter.com/tardis_sn>`_\. :raw-html:`<br />` :raw-html:`<br />`
-
 *********************************
 Previously Accepted GSoc Projects
 *********************************

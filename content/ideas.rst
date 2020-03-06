@@ -127,7 +127,7 @@ we want to have a functional GUI that acts as a Jupyter widget. Once this is imp
 example notebooks that exist within the documentation so that it is easy for users to try it out themselves.
 
 **Your first objective if you choose to accept the mission:** Make a new Jupyter notebook and embed it in the documentation
-that makes a bokeh plot (i.e. zoomable) of the spectrum in quickstart guide. Be creative in your approach, try to make it more interactive or add some new functionality taking inspiration from GUI guide in docs.
+that makes a bokeh plot (i.e. zoomable) of the spectrum in quickstart guide. Be creative in your approach, try to make it more interactive or add some new functionality taking inspiration from the GUI guide in docs.
 
 ------------
 

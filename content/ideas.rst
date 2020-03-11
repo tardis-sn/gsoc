@@ -66,7 +66,7 @@ In the TARDIS collaboration we first establish a detailed plan on implementing n
 work. This is an important step that ensures that the entire TARDIS collaboration is informed about the development
 efforts and that the team members can help shape the ideas during the discussion phase. We call these documents TEP -
 TARDIS Enhancement Proposals. We already have a great list of ideas at https://github.com/tardis-sn/tep that we need
-help with. Some of these we have specially selected for GSoC 2019 and are listed with specific “warm-up” tasks below.
+help with. Some of these we have specially selected for GSoC 2020 and are listed with specific “warm-up” tasks below.
 But feel free to propose your own TEP and make a PR on that.
 
 If you use one of our TEPs, you can definitely add more detail to the implementation, but what we really want to see is
@@ -126,8 +126,8 @@ QT for this type of application is no longer the ideal framework. Many applicati
 we want to have a functional GUI that acts as a Jupyter widget. Once this is implemented, we would like to have several
 example notebooks that exist within the documentation so that it is easy for users to try it out themselves.
 
-**Your first objective if you choose to accept the mission:** Make a Jupyter notebook and embed it in the documentation
-that showcases the current way of running TARDIS and plots a spectrum.
+**Your first objective if you choose to accept the mission:** Make a new Jupyter notebook and embed it in the documentation
+that makes a bokeh plot (i.e. zoomable) of the spectrum in quickstart guide. Be creative in your approach, try to make it more interactive or add some new functionality taking inspiration from the GUI guide in docs.
 
 ------------
 

@@ -1,8 +1,8 @@
-2020 Ideas Page
+2021 Ideas Page
 ###############
 
 
-:date: 2020-01-29
+:date: 2021-02-17
 :modified: 2010-10-04 18:40
 :tags: tardis, gsoc, ideas
 :category: ideas page
@@ -11,7 +11,7 @@
 :summary: Ideas Page
 
 ***************************
-TARDIS GSoC 2020 Ideas Page
+TARDIS GSoC 2021 Ideas Page
 ***************************
 
 **Astronomy and Astrophysics Background:**
@@ -59,14 +59,14 @@ This particular setup (tardis_example) is officially provided by the TARDIS coll
   :alt: Alternative text
 
 *******************************
-List of GSoC 2020 Project Ideas
+List of GSoC 2021 Project Ideas
 *******************************
 
 In the TARDIS collaboration we first establish a detailed plan on implementing new features before starting the actual
 work. This is an important step that ensures that the entire TARDIS collaboration is informed about the development
 efforts and that the team members can help shape the ideas during the discussion phase. We call these documents TEP -
 TARDIS Enhancement Proposals. We already have a great list of ideas at https://github.com/tardis-sn/tep that we need
-help with. Some of these we have specially selected for GSoC 2020 and are listed with specific “warm-up” tasks below.
+help with. Some of these we have specially selected for GSoC 2021 and are listed with specific “warm-up” tasks below.
 But feel free to propose your own TEP and make a PR on that.
 
 If you use one of our TEPs, you can definitely add more detail to the implementation, but what we really want to see is
@@ -77,178 +77,120 @@ Putting in a Pull Request with the First objective is essential for each proposa
 
 ------------
 
-**Visualizing TARDIS flow through a graph**
+**TARDIS Setups Framework**
 
 **Difficulty:** Easy
 
 **Astronomy Knowledge Needed:** None
 
-**Mentors:** Marc Williamson, Christian Vogl
+**Mentors:** Ezequiel Passaro, Andrew Fullard
 
-**Programming Skills Required:** Python, plotting preferred
+**Programming Skills Required** Python, GitHub Actions
 
-**GSoC Application Tag:** network-graph
+**GSoC Application Tag:** setups
 
-**Description:** TARDIS calculates the state of the gas of the exploding star in the plasma calculation. When the gas
-changes temperature, TARDIS can automatically calculate what properties of the gas change. It uses a network graph for
-this. This also allows us to visualize how the properties of the gas are calculated. This project will make an
-interactive visualization of this process using networkx and matplotlib.
+**Description:** Astrophysicists use TARDIS to create theoretical models of supernovae. One important aspect of these
+models is the simulated spectrum. The features in the spectrum depend on details of the user's model, but also on the
+atomic data and the physics implemented in TARDIS. However, since TARDIS is an actively developed code, this means that
+new versions of the code may change the outputted simulated spectra from old projects. This project will focus on
+developing an automated pipeline for running old models from scientific papers with new versions of the TARDIS code in
+order to check that scientific inferences are still valid.
 
-**Your first objective if you choose to accept the mission:** There already some parts of the visualization components
-written for this project. You can find this here:
-https://tardis-sn.github.io/tardis/api/tardis.plasma.base.html#tardis.plasma.base.BasePlasma.write_to_dot - try to
-write the graph to a dotfile and then visualize with graphviz.
 
-------------
+**Your first objective if you choose to accept the mission:** Download a model setup from the tardis-sn/tardis_setups
+repository and run the simulation.  Plot the simulated spectrum.
 
-**Jupyter Notebook Widget for TARDIS**
-
-**Difficulty:** Hard
-
-**Astronomy Knowledge Needed:** None
-
-**Mentors:** Wolfgang Kerzendorf, Yssa Camacho
-
-**Programming Skills Required:** Python, Jupyter
-
-**Related TEP:** `TEP012 <https://github.com/tardis-sn/tep/blob/master/TEP012_gui_overhaul.rst>`_
-
-**GSoC Application Tag:** jupyter-widget
-
-**Description:** Often we need more information about the model and the calculation than the mere spectrum. For
-example, we frequently need to investigate in detail how a specific spectral line feature forms, which ions and which
-specific line transitions contribute. For exactly this purpose a Qt-GUI was developed
-(see `here <https://tardis-sn.github.io/tardis/running/gui.html>`_\). It allows the user to
-easily analyse TARDIS runs and extract important physical information without knowing the exact inner data structure of
-TARDIS.
-
-QT for this type of application is no longer the ideal framework. Many applications now work with Jupyter notebook and
-we want to have a functional GUI that acts as a Jupyter widget. Once this is implemented, we would like to have several
-example notebooks that exist within the documentation so that it is easy for users to try it out themselves.
-
-**Your first objective if you choose to accept the mission:** Make a new Jupyter notebook and embed it in the documentation
-that makes a bokeh plot (i.e. zoomable) of the spectrum in quickstart guide. Be creative in your approach, try to make it more interactive or add some new functionality taking inspiration from the GUI guide in docs.
 
 ------------
 
-**Profile TARDIS**
-
-**Difficulty:** Easy/Moderate
-
-**Astronomy Knowledge Needed:** None
-
-**Mentors:** Wolfgang Kerzendorf, Christian Vogl
-
-**Programming Skills Required:** Python, Cython
-
-**GSoC Application Tag:** asv
-
-**Description:** TARDIS is a code that prides itself on being relatively fast to compute a synthetic spectrum. We are
-also continuously adding additional microphysics in the code which sometimes requires additional calculation. It is
-important to understand how much this microphyiscs adds to the runtime of the code. For this we want to implement a
-benchmark in asv (airspeed velocity) that can automatically generate a report for us.
-
-**Your first objective if you choose to accept the mission:** implement a simple benchmark in asv.
-
-------------
-
-**Quantity-ify TARDIS**
-
-**Difficulty:** Easy/Moderate
-
-**Astronomy Knowledge Needed:** None
-
-**Mentors:** Marc Williamson
-
-**Programming Skills Required:** Python, Pandas
-
-**GSoC Application Tag:** dfq
-
-**Description:** TARDIS frequently uses the Pandas.DataFrame and Pandas.Series data structures. However, these data
-structures are not immediately compatible with storing the physical units associated with the numbers stored in the
-structures. TARDIS puts a strong emphasis on both code readability and testing, and keeping track of the physical units
-during internal calculations is extremely important towards both of these points of emphasis. The goal of this project
-is to extend the Pandas data structures by adding meta data that stores the physical units. In addition, tests need to
-be written to ensure that the units during internal calculations are consistent.
-
-**Your first objective if you choose to accept the mission:** Write a simple extension of the Pandas.DataFrame that
-keeps track of units for the dataframe. Ensure that the units persist through copying operations. You can use the
-TARDIS IsotopeAbundances class for inspiration.
-
-------------
-
-**Integration Tests**
-
-**Difficulty:** Easy
-
-**Astronomy Knowledge Needed:** None
-
-**Mentors:** Vytautas, Andreas
-
-**Programming Skills Required:** Python, Azure Pipelines
-
-**GSoC Application Tag:** integration-testing
-
-**Description:**  Testing a scientific code like TARDIS is very important. We need to ensure that the scientific
-insights we gain using the code are not based on bugs. Open collaboration with GitHub is great, but the more people
-work on the code the more opportunities there are to introduce bugs. Making sure that the code doesn't change or only
-changes as we expect it, is thus an important part of TARDIS development.
-
-We have two types of tests: unit tests that verify small portions of the code and full-scale integration tests. Both of
-these test types are implemented with a framework. But the integration tests are difficult to use.
-
-* currently we mainly run the integration tests on an external server. We want to integrate them into our general Azure Pipeline continuous integration routine. We'd also like to expand that and check also different properties of our model against reference data (e.g. electron densities, ionization fractions, dilution factors)
-
-* hand in hand with expanding the verification process we will improve the reporting process which should contain detailed plots and comparison results. A framework exists but is currently not actively used.
-
-**Your first objective if you choose to accept the mission:** Run the integration tests as described here:
-https://tardis-sn.github.io/tardis/development/running_tests.html
-
-------------
-
-**Optimisation with Numba**
+**Custom Abundance Widget**
 
 **Difficulty:** Moderate
 
 **Astronomy Knowledge Needed:** None
 
-**Mentors:** Alice Harpole, Wolfgang Kerzendorf
+**Mentors:** Jaladh Singhal, Luke Harvey
 
-**Programming Skills Required:** Python
+**Programming Skills Required** Python, Jupyter
 
-**GSoC Application Tag:** numba
+**GSoC Application Tag:** widget
 
-**Description:** In order to optimize the execution of several computationally intensive parts of TARDIS, we currently
-use Cython. This converts these parts of the code to C and compiles them ahead of time, significantly improving their
-performance. However, while fast, Cython involves a lot of extra boilerplate code, making the code overall harder to
-follow and more difficult to maintain. We would, therefore, like to convert this Cython code to Numba, a just-in-time
-Python compiler that involves significantly less additional code to Cython but can achieve similar performance.
+**Description:** One of the use cases for TARDIS is to explore the composition of supernovae and, as such, users are
+able to run simulations of any custom model composition they wish. This project will focus on implementing a widget
+that allows the user to develop custom model compositions graphically. The widget will interface with the TARDIS model
+structure and should enable the user to manually edit the elemental abundances within the model, which can then also be
+output to a file.
 
-**Your first objective if you choose to accept the mission:** Modify the function intensity_black_body
-(https://github.com/tardis-sn/tardis/blob/f4dc1f2e36cc0406c9b90f8255ec74083c6ffc51/tardis/util/base.py#L246-L270)
-to be compiled with Numba.
+
+**Your first objective if you choose to accept the mission:** Create a plot showing the abundance in each cell as a
+function of velocity for an example tardis simulation set up using the csvy model format.  The simulation should have
+at least 3 shells.
 
 ------------
 
-**Enable the Dask framework for parallel execution for TARDIS**
+**Restructure Model Readers**
 
-**Difficulty:** Hard
+**Difficulty:** Moderate
 
-**Astronomy knowledge needed:** None
+**Astronomy Knowledge Needed:** None
 
-**Mentors:** Wolfgang Kerzendorf, Christian Vogl
+**Mentors:** Marc Williamson, Jack O'Brien
 
-**Programming skills:** Python, dask
+**Programming Skills Required** Python, Jupyter
 
-**GSoC Application Tag:** dask
+**GSoC Application Tag:** restructure
 
-**Description:** Exploring different simulations of supernovae and comparing them with observations is one of the
-important tasks of TARDIS. This means that TARDIS needs to be run many tens of thousand times with different inputs.
-The Dask framework will allow TARDIS to be excecuted on multi-core systems and super-computers. This project aims to
-combine TARDIS with dask to make it easy to run many iterations of TARDIS.
+**Description:** TARDIS reads in many different data formats to compose its models. Currently, these functions and
+classes are scattered across different files, making it difficult to understand the program flow and add new format
+readers. There is also duplication of functionality. We would like these functions to be aggregated and restructured
+to allow for future expansion and current maintenance.
 
-**Your first objective if you choose to accept the mission:** Use dask to run distributed TARDIS instances in parallel
-on your system. Use http://distributed.dask.org/en/latest/client.html as a guide to make a simple example.
+**Your first objective if you choose to accept the mission:** Produce a consistent naming scheme for the TARDIS model
+readers and CSVY parsers (notice the inconsistency already!).
+
+------------
+
+**Notebook Logging Framework**
+
+**Difficulty:** Moderate
+
+**Astronomy Knowledge Needed:** None
+
+**Mentors:** Marc Williamson, James Gillanders, Mark Magee
+
+**Programming Skills Required** Python, Jupyter
+
+**GSoC Application Tag:** logging
+
+**Description:** When TARDIS is run, log output including warnings and other prints, are dumped to the standard output.
+This creates confusing messaging for the end user. We would like the user to choose the level of information they
+receive, and visualize the output of the plasma calculations, so that the convergence of the simulation can be tracked
+in real-time.
+
+**Your first objective if you choose to accept the mission:** Add a verbosity option that suppresses warnings by
+default but allows errors.
+
+
+------------
+
+**Simulation Logging Framework**
+
+**Difficulty:** Moderate
+
+**Astronomy Knowledge Needed:** None
+
+**Mentors:** Andrew Fullard, Jack O'Brien
+
+**Programming Skills Required** Python, Numba
+
+**GSoC Application Tag:** logging
+
+**Description:** TARDIS currently has a partially-implemented logging function for the Monte Carlo simulation. It
+currently fails to output logging information to a .log file as expected. We would like the function to output the
+arguments and outputs of functions as they are run by the code so that we can debug longer simulation runs of TARDIS.
+
+**Your first objective if you choose to accept the mission:** Obtain output from the log_decorator, located in
+tardis/montecarlo/montecarlo_numba/montecarlo_logger.py
 
 ------------
 
@@ -258,7 +200,7 @@ on your system. Use http://distributed.dask.org/en/latest/client.html as a guide
 
 **Astronomy Knowledge Needed:** Atomic Physics
 
-**Mentors:** Andreas Flörs, Christian Vogl
+**Mentors:** Andreas Flörs, Christian Vogl, Ezequiel Passaro
 
 **Programming Skills Required:** Python
 

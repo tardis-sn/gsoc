@@ -26,115 +26,149 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../tardis-gsoc-app-guidelines.html">Application Guidelines</a></h1>
+                    <h1 class="entry-title"><a href="../tardis-gsoc-ideas.html">2021 Ideas Page</a></h1>
 <footer class="post-info">
-        <span>Wed 29 January 2020</span>
-<span>| tags: <a href="../tag/tardis.html">tardis</a><a href="../tag/gsoc.html">gsoc</a><a href="../tag/guidelines.html">guidelines</a></span>
-</footer><!-- /.post-info --><div class="section" id="writing-a-successful-application">
-<h2>Writing a Successful Application</h2>
-<p>Students should propose what they actually intend to accomplish, what they know about that task, and details about
-their background. Ability to perform the task is outright presumed by submitting a proposal. Students should propose a
-project catered to their ability that can be completed within the timeframe of the program. Students can demonstrate
-coding experience with patches.</p>
-<p>Early submissions are encouraged as it gives more time to review proposals in detail, offer feedback, and maybe ask
-questions. Submitting closer to the deadline isn't bad other than not getting feedback in advance.</p>
+        <span>Wed 17 February 2021</span>
+<span>| tags: <a href="../tag/tardis.html">tardis</a><a href="../tag/gsoc.html">gsoc</a><a href="../tag/ideas.html">ideas</a></span>
+</footer><!-- /.post-info --><div class="section" id="tardis-gsoc-2021-ideas-page">
+<h2>TARDIS GSoC 2021 Ideas Page</h2>
+<p><strong>Astronomy and Astrophysics Background:</strong></p>
+<img alt="Alternative text" src="../images/480px-SN1994D.jpg" style="width: 400px;" />
+<p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Supernova">supernova</a> (here we show SN1994D in the Galaxy NGC4526 - image source: wikipedia) marks the brilliant death throes of
+a star, during which it outshines its entire galaxy. It not only marks death, though: supernova ejecta change the
+evolution of the universe and enable the formation of planets and life as we know it. From the iron in your blood to
+the silicon in your laptop, supernovae return heavy elements assembled from the primordial hydrogen and helium left
+after the big bang.</p>
+<p>There are still many mysteries surrounding supernovae (e.g. their precise origins, inner workings, …). One way to study
+these objects in more detail is to split the light coming from these objects into its components (like using a prism)
+and analyzing the resulting data (which is called a spectrum). Here, we show spectra (black lines) of a number of
+different supernova types (image courtesy Daniel Kasen and LBL). Different chemical elements present in the supernova
+leave their mark on the spectra by imprinting characteristic features, so-called atomic lines (regions highlighted in
+colour). Thus, studying and interpreting such spectra allows us to identify what supernovae are made of.</p>
+<img alt="Alternative text" src="../images/sn_types.jpg" style="width: 800px;" />
+<p>With sophisticated computer simulations astronomers try to reproduce the observed spectra to draw conclusion about the
+properties of the supernova ejecta and ultimately the explosion mechanism and progenitor stars. TARDIS is such a
+numerical code. It calculates theoretical spectra based on a number of input parameters, such as the supernova
+brightness and the abundances of the different chemical elements present in the ejecta (e.g. Oxygen, Silicon, Iron,
+etc.). The main idea for this procedure is that by finding a close match between theoretical and observed spectra we
+identify the parameters that actually describe the supernovae.</p>
 </div>
-<div class="section" id="do">
-<h2>DO</h2>
-<p><strong>Be Detailed and Articulate</strong></p>
-<p>Go into detail about what you intend to do and how you intend to do it. Don't have typos and be clear in your writing.
-Cite academic references if they're relevant to your work. Create diagrams, show prototypes, create mock-up visuals,
-and provide more information via external links. You don't have to solve everything, but we need to see that you've
-thought things through.</p>
-<p><strong>Get Involved Early</strong></p>
-<p>Join Gitter, say hi on the mailing list, download the source code, and try things out. Talk to others, get to know who
-is who. Communicate early, communicate often.</p>
-<p><strong>Be Bold</strong></p>
-<p>We love innovative ideas. Make sure yours is in scope and is something we're interested in mentoring, but you're not
-limited to our ideas. Be ambitious and thorough in your solution.</p>
-<p><strong>Be Realistic</strong>
-Make sure the scope of your work is feasible and that you will have the necessary skills to implement your project on
-time. No bonus for proposing to reinvent the Internet. If you've got another job or commitment, your proposal should
-account for that obligation.</p>
-<p><strong>Be Passionate</strong>
-Show enthusiasm for your idea. Be excited. Passion is never a substitute for competence, but vastly helps your chances
-all other factors being equal.</p>
+<div class="section" id="the-tardis-project">
+<h2>The TARDIS Project</h2>
+<p>As mentioned in the background information above, TARDIS is a scientific tool (more specifically a Monte Carlo
+radiative transfer code) whose primary goal is the calculation of theoretical spectra for supernovae. Below, you find
+the typical result of a TARDIS calculation. It shows the calculated synthetic spectra for a simple supernova model.
+This particular setup (tardis_example) is officially provided by the TARDIS collaboration on the
+<a class="reference external" href="https://tardis-sn.github.io/tardis/quickstart/quickstart.html">documentation</a>.</p>
+<img alt="Alternative text" src="../images/tardis_example.png" style="width: 800px;" />
 </div>
-<div class="section" id="avoid">
-<h2>AVOID</h2>
-<p><strong>Don't copy/paste</strong></p>
-<p>If all you have to say about the project idea is what we wrote, it will be rejected. They are just meant to be starting
-points.</p>
-<p><strong>Don't be brief</strong></p>
-<p>Anticipate questions, include details. If your application is less than a few hundred words, you're probably not
-including necessary detail about your plans or yourself. Brief proposals very quickly get cut.</p>
-<p><strong>Don't be intimidated</strong>
-We don't bite. Your ideas will be questioned, we might disagree, and that's okay. It means we're interested. You will
-need to be able to talk about your ideas without getting defensive, be open to compromise, and take suggestions from
-others.</p>
-<p><strong>Don't be discouraged</strong>
-We have accepted those with no experience to experts and everything in between. Cater your application to your skills
-and you'll do just fine. You're expected to work hard and do your homework researching questions, but you're encouraged
-ask for help if you truly get stuck too.</p>
-<p><strong>Don't forget to tell us about yourself</strong></p>
-<p>Most of what we know about you and your abilities is going to come from your application. Include details about your
-background, experience, and anything else relevant to your work. If you have obligations that will impact your
-proposal, be upfront. You should be interacting with our community on Gitter or on the developer mailing list long
-before you submit your proposal so we have an idea how you interact. Don't forget to mention your Gitter/GitHub nick
-in your application.</p>
-</div>
-<div class="section" id="application-format">
-<h2>Application Format</h2>
-<p>There is intentionally no specific format to our applications. <strong>BUT</strong>… students are <strong>strongly</strong> encouraged to be
-creative, detailed, and discuss throughout the application process. Use a wiki page or the mailing list so your
-proposal can be reviewed before it's officially submitted. Final proposals should include <strong>at least</strong> the following
-information:</p>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt>Personal Information</dt>
-<dd><ul class="first last">
-<li>Name</li>
-<li>Email address</li>
-<li>Github username</li>
-<li>Brief background info</li>
-<li>(optional) Link to resume</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Project Information</dt>
-<dd><ul class="first last">
-<li>Project Title</li>
-<li>Brief project summary (&lt;500 words)</li>
-<li>Detailed project description (&gt;500 words)</li>
-<li>Links to any code or algorithms you intend to use</li>
-<li>Deliverables (specific, measurable goals)</li>
-<li><dl class="first docutils">
-<dt>Development schedule</dt>
-<dd><ul class="first last">
-<li>List at least 3 milestones</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Describe time availability (40+ hours/week assumed)</dt>
-<dd><ul class="first last">
-<li>List all commitments (e.g., exams, vacations, etc)</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li>(optional) Why us?</li>
-<li>(optional) Why you?</li>
-<li>(optional) Anything else?</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-<p><strong>You must agree to our</strong> <a class="reference external" href="../tardis-gsoc-acc-req.html">acceptance requirements</a> <strong>should you be selected.</strong></p>
+<div class="section" id="list-of-gsoc-2021-project-ideas">
+<h2>List of GSoC 2021 Project Ideas</h2>
+<p>In the TARDIS collaboration we first establish a detailed plan on implementing new features before starting the actual
+work. This is an important step that ensures that the entire TARDIS collaboration is informed about the development
+efforts and that the team members can help shape the ideas during the discussion phase. We call these documents TEP -
+TARDIS Enhancement Proposals. We already have a great list of ideas at <a class="reference external" href="https://github.com/tardis-sn/tep">https://github.com/tardis-sn/tep</a> that we need
+help with. Some of these we have specially selected for GSoC 2021 and are listed with specific “warm-up” tasks below.
+But feel free to propose your own TEP and make a PR on that.</p>
+<p>If you use one of our TEPs, you can definitely add more detail to the implementation, but what we really want to see is
+a detailed timeline with milestones that shows us that you have thought about how to implement the feature in three
+months. For any questions about the projects, please ask on <a class="reference external" href="https://gitter.im/tardis-sn/gsoc">Gitter</a>.</p>
+<p>Putting in a Pull Request with the First objective is essential for each proposal to allow to see how you work.</p>
+<hr class="docutils" />
+<p><strong>TARDIS Setups Framework</strong></p>
+<p><strong>Difficulty:</strong> Easy</p>
+<p><strong>Astronomy Knowledge Needed:</strong> None</p>
+<p><strong>Mentors:</strong> Ezequiel Passaro, Andrew Fullard</p>
+<p><strong>Programming Skills Required</strong> Python, GitHub Actions</p>
+<p><strong>GSoC Application Tag:</strong> setups</p>
+<p><strong>Description:</strong> Astrophysicists use TARDIS to create theoretical models of supernovae. One important aspect of these
+models is the simulated spectrum. The features in the spectrum depend on details of the user's model, but also on the
+atomic data and the physics implemented in TARDIS. However, since TARDIS is an actively developed code, this means that
+new versions of the code may change the outputted simulated spectra from old projects. This project will focus on
+developing an automated pipeline for running old models from scientific papers with new versions of the TARDIS code in
+order to check that scientific inferences are still valid.</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> Download a model setup from the tardis-sn/tardis_setups
+repository and run the simulation.  Plot the simulated spectrum.</p>
+<hr class="docutils" />
+<p><strong>Custom Abundance Widget</strong></p>
+<p><strong>Difficulty:</strong> Moderate</p>
+<p><strong>Astronomy Knowledge Needed:</strong> None</p>
+<p><strong>Mentors:</strong> Jaladh Singhal, Luke Harvey</p>
+<p><strong>Programming Skills Required</strong> Python, Jupyter</p>
+<p><strong>GSoC Application Tag:</strong> visualization: widget</p>
+<p><strong>Description:</strong> One of the use cases for TARDIS is to explore the composition of supernovae and, as such, users are
+able to run simulations of any custom model composition they wish. This project will focus on implementing a widget
+that allows the user to develop custom model compositions graphically. The widget will interface with the TARDIS model
+structure and should enable the user to manually edit the elemental abundances within the model, which can then also be
+output to a file.</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> Create a plot showing the abundance in each cell as a
+function of velocity for an example tardis simulation set up using the csvy model format.  The simulation should have
+at least 3 shells.</p>
+<hr class="docutils" />
+<p><strong>Restructure Model Readers</strong></p>
+<p><strong>Difficulty:</strong> Moderate</p>
+<p><strong>Astronomy Knowledge Needed:</strong> None</p>
+<p><strong>Mentors:</strong> Marc Williamson, Jack O'Brien</p>
+<p><strong>Programming Skills Required</strong> Python, Jupyter</p>
+<p><strong>GSoC Application Tag:</strong> visualization: widget</p>
+<p><strong>Description:</strong> TARDIS reads in many different data formats to compose its models. Currently, these functions and
+classes are scattered across different files, making it difficult to understand the program flow and add new format
+readers. There is also duplication of functionality. We would like these functions to be aggregated and restructured
+to allow for future expansion and current maintenance.</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> Produce a consistent naming scheme for the TARDIS model
+readers and CSVY parsers (notice the inconsistency already!).</p>
+<hr class="docutils" />
+<p><strong>Notebook Logging Framework</strong></p>
+<p><strong>Difficulty:</strong> Moderate</p>
+<p><strong>Astronomy Knowledge Needed:</strong> None</p>
+<p><strong>Mentors:</strong> Marc Williamson, James Gillanders, Mark Magee</p>
+<p><strong>Programming Skills Required</strong> Python, Jupyter</p>
+<p><strong>GSoC Application Tag:</strong> visualization: logging</p>
+<p><strong>Description:</strong> When TARDIS is run, log output including warnings and other prints, are dumped to the standard output.
+This creates confusing messaging for the end user. We would like the user to choose the level of information they
+receive, and visualize the output of the plasma calculations, so that the convergence of the simulation can be tracked
+in real-time.</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> Add a verbosity option that suppresses warnings by
+default but allows errors.</p>
+<hr class="docutils" />
+<p><strong>Simulation Logging Framework</strong></p>
+<p><strong>Difficulty:</strong> Moderate</p>
+<p><strong>Astronomy Knowledge Needed:</strong> None</p>
+<p><strong>Mentors:</strong> Andrew Fullard, Jack O'Brien</p>
+<p><strong>Programming Skills Required</strong> Python, Numba</p>
+<p><strong>GSoC Application Tag:</strong> visualization: logging</p>
+<p><strong>Description:</strong> TARDIS currently has a partially-implemented logging function for the Monte Carlo simulation. It
+currently fails to output logging information to a .log file as expected. We would like the function to output the
+arguments and outputs of functions as they are run by the code so that we can debug longer simulation runs of TARDIS.</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> Obtain output from the log_decorator, located in
+tardis/montecarlo/montecarlo_numba/montecarlo_logger.py</p>
+<hr class="docutils" />
+<p><strong>Carsus Atomic Data</strong></p>
+<p><strong>Difficulty:</strong> Hard</p>
+<p><strong>Astronomy Knowledge Needed:</strong> Atomic Physics</p>
+<p><strong>Mentors:</strong> Andreas Flörs, Christian Vogl, Ezequiel Passaro</p>
+<p><strong>Programming Skills Required:</strong> Python</p>
+<p><strong>GSoC Application Tag:</strong> Carsus</p>
+<p><strong>Description:</strong> In addition to the input parameters (brightness of the supernova, ejected mass of the different
+chemical elements, etc.), TARDIS requires data for describing the structure of atoms from different elements (e.g. a
+sodium atom is differently structured than an iron atom; see the figure for a quick overview for carbon).</p>
+<img alt="Alternative text" src="../images/bohrmodel.png" style="width: 400px;" />
+<p>This data is not measured by astronomers but is most often gathered in a lab by atomic physicists. As measurement
+equipment gets more and more precise, so do the measured structures of different elements. Thus these values update
+from time to time and are often available in simple ASCII files (<a class="reference external" href="http://kurucz.harvard.edu/atoms/1401/gf1401.gam">http://kurucz.harvard.edu/atoms/1401/gf1401.gam</a>).
+While we have compiled a small atom data set from some specific sources for our initial work, we would like to get a
+collection of parsers that can read the different ASCII formats of the group and put this information in a uniform
+database.</p>
+<p>For this project, you would help us make parsers for a variety of formats from a collection of atomic data sources
+(see the TEP) and in the second part put this into a database. The assembled database will not only be very interesting
+for us, but also for many other fields of astronomy that do rely on atomic data. A useful resource of understanding
+atomic structure description can be found in
+<a class="reference external" href="http://www.physics.byu.edu/faculty/bergeson/physics571/notes/L27spectnotation.pdf">http://www.physics.byu.edu/faculty/bergeson/physics571/notes/L27spectnotation.pdf</a>.</p>
+<p>We created a package that compiles all of this information into a database named Carsus
+(see <a class="reference external" href="http://carsus.readthedocs.io/en/latest/">http://carsus.readthedocs.io/en/latest/</a>). For this year we aim to strengthen the link between Carsus and TARDIS
+and also include more atomic data into Carsus.</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> download the atomic data from
+<a class="reference external" href="http://kookaburra.phyast.pitt.edu/hillier/web/CMFGEN.htm">http://kookaburra.phyast.pitt.edu/hillier/web/CMFGEN.htm</a> and read in the tabulated data contained in si2_osc_kurucz.</p>
 </div>
                 </article>
             </aside><!-- /#featured -->

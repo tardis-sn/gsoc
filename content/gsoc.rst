@@ -49,6 +49,10 @@ Previously Accepted GSoc Projects
 These were the projects that we selected for GSoC 2016 (a while ago but still a good reference) and can serve as a
 reference for future proposals:
 
+* `2020 Accepted Application 1 <{static}/pdfs/jaladh-singhal_gsoc2020_tardis.pdf>`_
+
+* `2020 Accepted Application 2 <{static}/pdfs/TARDIS_Proposal_2020.pdf>`_
+
 * `2019 Accepted Application <{static}/pdfs/tardis_proposal.pdf>`_
 
 * `2016 Accepted Application 1 <{static}/pdfs/ftsamis_gsoc_2016.pdf>`_

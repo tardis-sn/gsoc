@@ -1,8 +1,8 @@
-2021 Ideas Page
+2022 Ideas Page
 ###############
 
 
-:date: 2021-02-17
+:date: 2022-02-16
 :modified: 2010-10-04 18:40
 :tags: tardis, gsoc, ideas
 :category: ideas page
@@ -59,7 +59,7 @@ This particular setup (tardis_example) is officially provided by the TARDIS coll
   :alt: Alternative text
 
 *******************************
-List of GSoC 2021 Project Ideas
+List of GSoC 2022 Project Ideas
 *******************************
 
 In the TARDIS collaboration we first establish a detailed plan on implementing new features before starting the actual
@@ -100,31 +100,57 @@ order to check that scientific inferences are still valid.
 **Your first objective if you choose to accept the mission:** Download a model setup from the tardis-sn/tardis_setups
 repository and run the simulation.  Plot the simulated spectrum.
 
-
 ------------
 
-**Custom Abundance Widget**
+**Resuming TARDIS Simulations from HDF**
 
-**Difficulty:** Moderate
+**Difficulty:** Hard
+
+**Project Length:** Long
 
 **Astronomy Knowledge Needed:** None
 
-**Mentors:** Jaladh Singhal, Luke Harvey
+**Mentors:** Marc, Andrew
 
-**Programming Skills Required** Python, Jupyter
+**Programming Skills Required** Python, Github
 
-**GSoC Application Tag:** widget
+**GSoC Application Tag:** hdf
 
-**Description:** One of the use cases for TARDIS is to explore the composition of supernovae and, as such, users are
-able to run simulations of any custom model composition they wish. This project will focus on implementing a widget
-that allows the user to develop custom model compositions graphically. The widget will interface with the TARDIS model
-structure and should enable the user to manually edit the elemental abundances within the model, which can then also be
-output to a file.
+**Description:** Currently, TARDIS simulations run quickly and thus pausing and resuming a simulation is not necessary.
+However, future additions to the code may increase runtimes substantially, so we would like to implement a way to save
+and restart a TARDIS run arbitrarily. TARDIS produces HDF files of simulation results, so a similar method to save the
+in-progress simulation would be appropriate. Pickling is not reliable for our custom classes. When pausing and writing
+to file occurs should be determined by the end user at runtime.
 
 
-**Your first objective if you choose to accept the mission:** Create a plot showing the abundance in each cell as a
-function of velocity for an example tardis simulation set up using the csvy model format.  The simulation should have
-at least 3 shells.
+**Your first objective if you choose to accept the mission:** Save an HDF file of the simulation and load it back to
+plot results from the HDF file.
+
+
+------------
+
+**Monte Carlo 2D Packet Visualization**
+
+**Difficulty:** Moderate
+
+**Project Length:** Long
+
+**Astronomy Knowledge Needed:** None
+
+**Mentors:** Jaladh, Jack
+
+**Programming Skills Required** Python, Github
+
+**GSoC Application Tag:** mc_viz
+
+**Description:**  TARDIS uses a monte carlo method to propagate photon packets through a model of an exploded star.  As
+these virtual packets move through the ejecta model they interact with the gas through absorption, emission, and
+scattering.  TARDIS currently has packet tracking capabilities to log the trajectories of packets during the
+simulation, but this information is only stored in an ASCII datafile.  This project will build a visualization tool so
+that scientists can see exactly how packets move through their models.
+
+**Your first objective if you choose to accept the mission:**  Run a TARDIS simulation with packet logging enabled with
+only 1 packet.  Plot the trajectory of the packet through the ejecta by graphing mu vs r.
 
 ------------
 
@@ -147,50 +173,6 @@ to allow for future expansion and current maintenance.
 
 **Your first objective if you choose to accept the mission:** Produce a consistent naming scheme for the TARDIS model
 readers and CSVY parsers (notice the inconsistency already!).
-
-------------
-
-**Notebook Logging Framework**
-
-**Difficulty:** Moderate
-
-**Astronomy Knowledge Needed:** None
-
-**Mentors:** Marc Williamson, James Gillanders, Mark Magee
-
-**Programming Skills Required** Python, Jupyter
-
-**GSoC Application Tag:** logging
-
-**Description:** When TARDIS is run, log output including warnings and other prints, are dumped to the standard output.
-This creates confusing messaging for the end user. We would like the user to choose the level of information they
-receive, and visualize the output of the plasma calculations, so that the convergence of the simulation can be tracked
-in real-time.
-
-**Your first objective if you choose to accept the mission:** Add a verbosity option that suppresses warnings by
-default but allows errors.
-
-
-------------
-
-**Simulation Logging Framework**
-
-**Difficulty:** Moderate
-
-**Astronomy Knowledge Needed:** None
-
-**Mentors:** Andrew Fullard, Jack O'Brien
-
-**Programming Skills Required** Python, Numba
-
-**GSoC Application Tag:** logging
-
-**Description:** TARDIS currently has a partially-implemented logging function for the Monte Carlo simulation. It
-currently fails to output logging information to a .log file as expected. We would like the function to output the
-arguments and outputs of functions as they are run by the code so that we can debug longer simulation runs of TARDIS.
-
-**Your first objective if you choose to accept the mission:** Obtain output from the log_decorator, located in
-tardis/montecarlo/montecarlo_numba/montecarlo_logger.py
 
 ------------
 

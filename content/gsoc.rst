@@ -66,7 +66,7 @@ TARDIS GSoC Ideas Page
 **********************
 
 We have compiled some background information about TARDIS and the science we do with it as well as some of our
-suggested projects for GSoC 2019 on the `Ideas Page <{filename}ideas.rst>`_\.
+suggested projects for GSoC 2022 on the `Ideas Page <{filename}ideas.rst>`_\.
 
 You are also welcome to come up with your own project ideas and discuss them with the TARDIS mentors. We're here to
 help you become new open source developers, so don't be shy if you have any questions. The best way to get in contact

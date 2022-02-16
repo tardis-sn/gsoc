@@ -11,7 +11,7 @@
 :summary: Ideas Page
 
 ***************************
-TARDIS GSoC 2021 Ideas Page
+TARDIS GSoC 2022 Ideas Page
 ***************************
 
 **Astronomy and Astrophysics Background:**
@@ -66,7 +66,7 @@ In the TARDIS collaboration we first establish a detailed plan on implementing n
 work. This is an important step that ensures that the entire TARDIS collaboration is informed about the development
 efforts and that the team members can help shape the ideas during the discussion phase. We call these documents TEP -
 TARDIS Enhancement Proposals. We already have a great list of ideas at https://github.com/tardis-sn/tep that we need
-help with. Some of these we have specially selected for GSoC 2021 and are listed with specific “warm-up” tasks below.
+help with. Some of these we have specially selected for GSoC 2022 and are listed with specific “warm-up” tasks below.
 But feel free to propose your own TEP and make a PR on that.
 
 If you use one of our TEPs, you can definitely add more detail to the implementation, but what we really want to see is

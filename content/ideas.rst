@@ -200,8 +200,6 @@ readers and CSVY parsers (notice the inconsistency already!).
 
 **Programming Skills Required:** Python
 
-**GSoC Application Tag:** Carsus
-
 **Description:** In addition to the input parameters (brightness of the supernova, ejected mass of the different
 chemical elements, etc.), TARDIS requires data for describing the structure of atoms from different elements (e.g. a
 sodium atom is differently structured than an iron atom; see the figure for a quick overview for carbon).
@@ -227,5 +225,5 @@ We created a package that compiles all of this information into a database named
 (see http://carsus.readthedocs.io/en/latest/). For this year we aim to strengthen the link between Carsus and TARDIS
 and also include more atomic data into Carsus.
 
-**Your first objective if you choose to accept the mission:** download the atomic data from
+**Your first objective if you choose to accept the mission:** Download the atomic data from
 http://kookaburra.phyast.pitt.edu/hillier/web/CMFGEN.htm and read in the tabulated data contained in si2_osc_kurucz.

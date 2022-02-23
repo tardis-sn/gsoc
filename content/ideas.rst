@@ -87,7 +87,6 @@ Putting in a Pull Request with the First objective is essential for each proposa
 
 **Programming Skills Required** Python, GitHub Actions
 
-**GSoC Application Tag:** setups
 
 **Description:** Astrophysicists use TARDIS to create theoretical models of supernovae. One important aspect of these
 models is the simulated spectrum. The features in the spectrum depend on details of the user's model, but also on the
@@ -114,8 +113,6 @@ repository and run the simulation.  Plot the simulated spectrum.
 
 **Programming Skills Required** Python, Github
 
-**GSoC Application Tag:** hdf
-
 **Description:** Currently, TARDIS simulations run quickly and thus pausing and resuming a simulation is not necessary.
 However, future additions to the code may increase runtimes substantially, so we would like to implement a way to save
 and restart a TARDIS run arbitrarily. TARDIS produces HDF files of simulation results, so a similar method to save the
@@ -126,6 +123,26 @@ to file occurs should be determined by the end user at runtime.
 **Your first objective if you choose to accept the mission:** Save an HDF file of the simulation and load it back to
 plot results from the HDF file.
 
+------------
+
+**Better testing framework to ascertain the scientific accuracy of TARDIS**
+
+**Difficulty:** Easy
+
+**Project Length:** Long
+
+**Astronomy Knowledge Needed:** None
+
+**Mentors:** Ezequiel, Wolfgang
+
+**Programming Skills Required** Python, Github
+
+
+
+**Description:** The current framework for testing has been organically grown over the lifetime of TARDIS. There are several duplications, inefficencies, and outdated parts that hinder a rapid development of the scientific capabilities of TARDIS. In this project, you would work together with the TARDIS team to plan a new more modern testing framework and implement it over the summer. 
+
+
+**Your first objective if you choose to accept the mission:** Look at the documentation to run the TARDIS documentation (http://tardis-sn.github.io/tardis) with refdata enabled. Run them locally on your machine and post the last part of the tests in an issue on the GitHub repository. 
 
 ------------
 
@@ -141,7 +158,6 @@ plot results from the HDF file.
 
 **Programming Skills Required** Python, Github
 
-**GSoC Application Tag:** mc_viz
 
 **Description:**  TARDIS uses a monte carlo method to propagate photon packets through a model of an exploded star.  As
 these virtual packets move through the ejecta model they interact with the gas through absorption, emission, and
@@ -150,7 +166,7 @@ simulation, but this information is only stored in an ASCII datafile.  This proj
 that scientists can see exactly how packets move through their models.
 
 **Your first objective if you choose to accept the mission:**  Run a TARDIS simulation with packet logging enabled with
-only 1 packet.  Plot the trajectory of the packet through the ejecta by graphing mu vs r.
+only 1 packet.  Plot the trajectory of the packet through the ejecta by graphing mu vs r and make it a notebook and post it as a PDF in an issue.
 
 ------------
 
@@ -163,8 +179,6 @@ only 1 packet.  Plot the trajectory of the packet through the ejecta by graphing
 **Mentors:** Marc Williamson, Jack O'Brien
 
 **Programming Skills Required** Python, Jupyter
-
-**GSoC Application Tag:** restructure
 
 **Description:** TARDIS reads in many different data formats to compose its models. Currently, these functions and
 classes are scattered across different files, making it difficult to understand the program flow and add new format

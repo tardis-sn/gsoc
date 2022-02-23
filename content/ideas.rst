@@ -121,7 +121,9 @@ to file occurs should be determined by the end user at runtime.
 
 
 **Your first objective if you choose to accept the mission:** Save an HDF file of the simulation and load it back to
-plot results from the HDF file.
+plot results from the HDF file. You should plot the estimators (`j_estimator`  and `w`) versus shell index, temperature 
+(`t_rad`) versus shell index, and the luminosity density versus wavelength. You will need to investigate the keys of the 
+HDF file to find these values. Check out the documentation page "Storing Simulations to HDF".
 
 ------------
 

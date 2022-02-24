@@ -187,8 +187,11 @@ classes are scattered across different files, making it difficult to understand 
 readers. There is also duplication of functionality. We would like these functions to be aggregated and restructured
 to allow for future expansion and current maintenance.
 
-**Your first objective if you choose to accept the mission:** Produce a consistent naming scheme for the TARDIS model
-readers and CSVY parsers (notice the inconsistency already!).
+**Your first objective if you choose to accept the mission:** TARDIS uses a variety of parser functions in order
+to read model information into class objects.  Most of these functions reside in the tardis/io/model_reader.py
+file, but some are kept in the tardis/io/parsers/ directory.  Move the CSVY related parsers from the parser
+directory and incorporate those functions into the model_reader.py file.  This change will require fixing
+import statements across the codebase.  Make a PR that fixes `issue 1911. <https://github.com/tardis-sn/tardis/issues/1911>`_
 
 ------------
 

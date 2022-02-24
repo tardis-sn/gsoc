@@ -35,8 +35,8 @@
 <footer class="post-info">
         <span>Wed 16 February 2022</span>
 <span>| tags: <a href="./tag/tardis.html">tardis</a><a href="./tag/gsoc.html">gsoc</a><a href="./tag/ideas.html">ideas</a></span>
-</footer><!-- /.post-info -->      <div class="section" id="tardis-gsoc-2021-ideas-page">
-<h2>TARDIS GSoC 2021 Ideas Page</h2>
+</footer><!-- /.post-info -->      <div class="section" id="tardis-gsoc-2022-ideas-page">
+<h2>TARDIS GSoC 2022 Ideas Page</h2>
 <p><strong>Astronomy and Astrophysics Background:</strong></p>
 <img alt="Alternative text" src="./images/480px-SN1994D.jpg" style="width: 400px;" />
 <p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Supernova">supernova</a> (here we show SN1994D in the Galaxy NGC4526 - image source: wikipedia) marks the brilliant death throes of
@@ -73,7 +73,7 @@ This particular setup (tardis_example) is officially provided by the TARDIS coll
 work. This is an important step that ensures that the entire TARDIS collaboration is informed about the development
 efforts and that the team members can help shape the ideas during the discussion phase. We call these documents TEP -
 TARDIS Enhancement Proposals. We already have a great list of ideas at <a class="reference external" href="https://github.com/tardis-sn/tep">https://github.com/tardis-sn/tep</a> that we need
-help with. Some of these we have specially selected for GSoC 2021 and are listed with specific “warm-up” tasks below.
+help with. Some of these we have specially selected for GSoC 2022 and are listed with specific “warm-up” tasks below.
 But feel free to propose your own TEP and make a PR on that.</p>
 <p>If you use one of our TEPs, you can definitely add more detail to the implementation, but what we really want to see is
 a detailed timeline with milestones that shows us that you have thought about how to implement the feature in three
@@ -85,7 +85,6 @@ months. For any questions about the projects, please ask on <a class="reference 
 <p><strong>Astronomy Knowledge Needed:</strong> None</p>
 <p><strong>Mentors:</strong> Ezequiel Passaro, Andrew Fullard</p>
 <p><strong>Programming Skills Required</strong> Python, GitHub Actions</p>
-<p><strong>GSoC Application Tag:</strong> setups</p>
 <p><strong>Description:</strong> Astrophysicists use TARDIS to create theoretical models of supernovae. One important aspect of these
 models is the simulated spectrum. The features in the spectrum depend on details of the user's model, but also on the
 atomic data and the physics implemented in TARDIS. However, since TARDIS is an actively developed code, this means that
@@ -101,14 +100,24 @@ repository and run the simulation.  Plot the simulated spectrum.</p>
 <p><strong>Astronomy Knowledge Needed:</strong> None</p>
 <p><strong>Mentors:</strong> Marc, Andrew</p>
 <p><strong>Programming Skills Required</strong> Python, Github</p>
-<p><strong>GSoC Application Tag:</strong> hdf</p>
 <p><strong>Description:</strong> Currently, TARDIS simulations run quickly and thus pausing and resuming a simulation is not necessary.
 However, future additions to the code may increase runtimes substantially, so we would like to implement a way to save
 and restart a TARDIS run arbitrarily. TARDIS produces HDF files of simulation results, so a similar method to save the
 in-progress simulation would be appropriate. Pickling is not reliable for our custom classes. When pausing and writing
 to file occurs should be determined by the end user at runtime.</p>
 <p><strong>Your first objective if you choose to accept the mission:</strong> Save an HDF file of the simulation and load it back to
-plot results from the HDF file.</p>
+plot results from the HDF file. You should plot the estimators (<cite>j_estimator</cite>  and <cite>w</cite>) versus shell index, temperature
+(<cite>t_rad</cite>) versus shell index, and the luminosity density versus wavelength. You will need to investigate the keys of the
+HDF file to find these values. Check out the documentation page &quot;Storing Simulations to HDF&quot;.</p>
+<hr class="docutils" />
+<p><strong>Better testing framework to ascertain the scientific accuracy of TARDIS</strong></p>
+<p><strong>Difficulty:</strong> Easy</p>
+<p><strong>Project Length:</strong> Long</p>
+<p><strong>Astronomy Knowledge Needed:</strong> None</p>
+<p><strong>Mentors:</strong> Ezequiel, Wolfgang</p>
+<p><strong>Programming Skills Required</strong> Python, Github</p>
+<p><strong>Description:</strong> The current framework for testing has been organically grown over the lifetime of TARDIS. There are several duplications, inefficencies, and outdated parts that hinder a rapid development of the scientific capabilities of TARDIS. In this project, you would work together with the TARDIS team to plan a new more modern testing framework and implement it over the summer.</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> Look at the documentation to run the TARDIS documentation (<a class="reference external" href="http://tardis-sn.github.io/tardis">http://tardis-sn.github.io/tardis</a>) with refdata enabled. Run them locally on your machine and post the last part of the tests in an issue on the GitHub repository.</p>
 <hr class="docutils" />
 <p><strong>Monte Carlo 2D Packet Visualization</strong></p>
 <p><strong>Difficulty:</strong> Moderate</p>
@@ -116,34 +125,34 @@ plot results from the HDF file.</p>
 <p><strong>Astronomy Knowledge Needed:</strong> None</p>
 <p><strong>Mentors:</strong> Jaladh, Jack</p>
 <p><strong>Programming Skills Required</strong> Python, Github</p>
-<p><strong>GSoC Application Tag:</strong> mc_viz</p>
 <p><strong>Description:</strong>  TARDIS uses a monte carlo method to propagate photon packets through a model of an exploded star.  As
 these virtual packets move through the ejecta model they interact with the gas through absorption, emission, and
 scattering.  TARDIS currently has packet tracking capabilities to log the trajectories of packets during the
 simulation, but this information is only stored in an ASCII datafile.  This project will build a visualization tool so
 that scientists can see exactly how packets move through their models.</p>
 <p><strong>Your first objective if you choose to accept the mission:</strong>  Run a TARDIS simulation with packet logging enabled with
-only 1 packet.  Plot the trajectory of the packet through the ejecta by graphing mu vs r.</p>
+only 1 packet.  Plot the trajectory of the packet through the ejecta by graphing mu vs r and make it a notebook and post it as a PDF in an issue.</p>
 <hr class="docutils" />
 <p><strong>Restructure Model Readers</strong></p>
 <p><strong>Difficulty:</strong> Moderate</p>
 <p><strong>Astronomy Knowledge Needed:</strong> None</p>
 <p><strong>Mentors:</strong> Marc Williamson, Jack O'Brien</p>
 <p><strong>Programming Skills Required</strong> Python, Jupyter</p>
-<p><strong>GSoC Application Tag:</strong> restructure</p>
 <p><strong>Description:</strong> TARDIS reads in many different data formats to compose its models. Currently, these functions and
 classes are scattered across different files, making it difficult to understand the program flow and add new format
 readers. There is also duplication of functionality. We would like these functions to be aggregated and restructured
 to allow for future expansion and current maintenance.</p>
-<p><strong>Your first objective if you choose to accept the mission:</strong> Produce a consistent naming scheme for the TARDIS model
-readers and CSVY parsers (notice the inconsistency already!).</p>
+<p><strong>Your first objective if you choose to accept the mission:</strong> TARDIS uses a variety of parser functions in order
+to read model information into class objects.  Most of these functions reside in the tardis/io/model_reader.py
+file, but some are kept in the tardis/io/parsers/ directory.  Move the CSVY related parsers from the parser
+directory and incorporate those functions into the model_reader.py file.  This change will require fixing
+import statements across the codebase.  Make a PR that fixes <a class="reference external" href="https://github.com/tardis-sn/tardis/issues/1911">issue 1911.</a></p>
 <hr class="docutils" />
 <p><strong>Carsus Atomic Data</strong></p>
 <p><strong>Difficulty:</strong> Hard</p>
 <p><strong>Astronomy Knowledge Needed:</strong> Atomic Physics</p>
 <p><strong>Mentors:</strong> Andreas Flörs, Christian Vogl, Ezequiel Passaro</p>
 <p><strong>Programming Skills Required:</strong> Python</p>
-<p><strong>GSoC Application Tag:</strong> Carsus</p>
 <p><strong>Description:</strong> In addition to the input parameters (brightness of the supernova, ejected mass of the different
 chemical elements, etc.), TARDIS requires data for describing the structure of atoms from different elements (e.g. a
 sodium atom is differently structured than an iron atom; see the figure for a quick overview for carbon).</p>
@@ -162,7 +171,7 @@ atomic structure description can be found in
 <p>We created a package that compiles all of this information into a database named Carsus
 (see <a class="reference external" href="http://carsus.readthedocs.io/en/latest/">http://carsus.readthedocs.io/en/latest/</a>). For this year we aim to strengthen the link between Carsus and TARDIS
 and also include more atomic data into Carsus.</p>
-<p><strong>Your first objective if you choose to accept the mission:</strong> download the atomic data from
+<p><strong>Your first objective if you choose to accept the mission:</strong> Download the atomic data from
 <a class="reference external" href="http://kookaburra.phyast.pitt.edu/hillier/web/CMFGEN.htm">http://kookaburra.phyast.pitt.edu/hillier/web/CMFGEN.htm</a> and read in the tabulated data contained in si2_osc_kurucz.</p>
 </div>
 

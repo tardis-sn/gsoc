@@ -81,6 +81,8 @@ Putting in a Pull Request with the First objective is essential for each proposa
 
 **Difficulty:** Easy
 
+**Project Length:** 350 hours
+
 **Astronomy Knowledge Needed:** None
 
 **Mentors:** Ezequiel Passaro, Andrew Fullard
@@ -105,7 +107,7 @@ repository and run the simulation.  Plot the simulated spectrum.
 
 **Difficulty:** Hard
 
-**Project Length:** Long
+**Project Length:** 350 hours
 
 **Astronomy Knowledge Needed:** None
 
@@ -131,7 +133,7 @@ HDF file to find these values. Check out the documentation page "Storing Simulat
 
 **Difficulty:** Easy
 
-**Project Length:** Long
+**Project Length:** 350 hours
 
 **Astronomy Knowledge Needed:** None
 
@@ -152,7 +154,7 @@ HDF file to find these values. Check out the documentation page "Storing Simulat
 
 **Difficulty:** Moderate
 
-**Project Length:** Long
+**Project Length:** 350 hours
 
 **Astronomy Knowledge Needed:** None
 
@@ -176,6 +178,8 @@ only 1 packet.  Plot the trajectory of the packet through the ejecta by graphing
 
 **Difficulty:** Moderate
 
+**Project Length:** 175 hours
+
 **Astronomy Knowledge Needed:** None
 
 **Mentors:** Marc Williamson, Jack O'Brien
@@ -198,6 +202,8 @@ import statements across the codebase.  Make a PR that fixes `issue 1911. <https
 **Carsus Atomic Data**
 
 **Difficulty:** Hard
+
+**Project Length:** 350 hours
 
 **Astronomy Knowledge Needed:** Atomic Physics
 

@@ -26,7 +26,7 @@ TARDIS is an open source radiative transfer code for simulating supernova spectr
 reproducible science, as well as mentoring new members of the TARDIS community! TARDIS has participated in the Google
 Summer of Code (GSoC) for the last few years, and we highly encourage interested students to apply! If you are
 interested in TARDIS, follow the
-collaboration on `Twitter <https://twitter.com/tardis_sn>`_\.
+collaboration on `Twitter <https://twitter.com/tardis_sn>` and join us on `Gitter <https://gitter.im/tardis-sn/gsoc>`_\.
 
 ********************
 Apply to TARDIS GSoC

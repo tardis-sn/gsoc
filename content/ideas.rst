@@ -85,7 +85,7 @@ Putting in a Pull Request with the First objective is essential for each proposa
 
 **Astronomy Knowledge Needed:** None
 
-**Mentors:** Ezequiel Passaro, Andrew Fullard
+**Mentors:** Ezequiel Passaro, Andrew Fullard, Aoife Boyle
 
 **Programming Skills Required** Python, GitHub Actions
 
@@ -111,7 +111,7 @@ repository and run the simulation.  Plot the simulated spectrum.
 
 **Astronomy Knowledge Needed:** None
 
-**Mentors:** Marc, Andrew
+**Mentors:** Marc Williamson, Andrew Fullard, Alexander Holas
 
 **Programming Skills Required** Python, Github
 
@@ -137,7 +137,7 @@ HDF file to find these values. Check out the documentation page "Storing Simulat
 
 **Astronomy Knowledge Needed:** None
 
-**Mentors:** Ezequiel, Wolfgang
+**Mentors:** Ezequiel Passaro, Wolfgang Kerzendorf, Alexander Holas
 
 **Programming Skills Required** Python, Github
 
@@ -146,7 +146,7 @@ HDF file to find these values. Check out the documentation page "Storing Simulat
 **Description:** The current framework for testing has been organically grown over the lifetime of TARDIS. There are several duplications, inefficencies, and outdated parts that hinder a rapid development of the scientific capabilities of TARDIS. In this project, you would work together with the TARDIS team to plan a new more modern testing framework and implement it over the summer. 
 
 
-**Your first objective if you choose to accept the mission:** Look at the documentation to run the TARDIS documentation (http://tardis-sn.github.io/tardis) with refdata enabled. Run them locally on your machine and post the last part of the tests in an issue on the GitHub repository. 
+**Your first objective if you choose to accept the mission:** Look at the documentation to run the TARDIS tests (http://tardis-sn.github.io/tardis) with refdata enabled. Run them locally on your machine and post the last part of the tests in an issue on the GitHub repository. 
 
 ------------
 
@@ -158,7 +158,7 @@ HDF file to find these values. Check out the documentation page "Storing Simulat
 
 **Astronomy Knowledge Needed:** None
 
-**Mentors:** Jaladh, Jack
+**Mentors:** Jaladh Singhal, Jack O'Brien
 
 **Programming Skills Required** Python, Github
 
@@ -207,7 +207,7 @@ import statements across the codebase.  Make a PR that fixes `issue 1911. <https
 
 **Astronomy Knowledge Needed:** Atomic Physics
 
-**Mentors:** Andreas Flörs, Christian Vogl, Ezequiel Passaro
+**Mentors:** Andreas Flörs, Christian Vogl, Ezequiel Passaro, Aoife Boyle
 
 **Programming Skills Required:** Python
 
